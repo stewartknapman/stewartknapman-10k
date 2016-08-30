@@ -4,7 +4,7 @@
   "description": "Entry for the 10k apart competition",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha _tests/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,20 @@
   "bugs": {
     "url": "https://github.com/stewartknapman/stewartknapman-10k/issues"
   },
-  "homepage": "https://github.com/stewartknapman/stewartknapman-10k#readme"
+  "homepage": "https://github.com/stewartknapman/stewartknapman-10k#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "browser-sync": "^2.14.0",
+    "browserify": "^13.1.0",
+    "chai": "^3.5.0",
+    "cssmin": "^0.4.3",
+    "html-minifier": "^3.0.2",
+    "jsdom": "^9.4.2",
+    "jsdom-global": "^2.1.0",
+    "node-sass": "^3.8.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.6.0",
+    "uglify-js": "^2.7.3",
+    "watch": "^0.19.2"
+  }
 }
