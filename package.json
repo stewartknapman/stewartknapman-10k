@@ -4,14 +4,14 @@
   "description": "Entry for the 10k apart competition",
   "main": "index.html",
   "scripts": {
-    "build": "parallelshell 'npm run sync' 'npm run js:watch' 'npm run css:watch' 'npm run html:watch'",
+    "build": "parallelshell 'npm run js:watch' 'npm run css:watch' 'npm run html:watch'",
     "js:watch": "watch 'npm run test' ./_src/js/ ./_tests/",
     "test": "mocha _tests/",
     "posttest": "browserify --debug ./_src/js/core.js > ./j/a.debug.js && browserify ./_src/js/core.js | uglifyjs -c -m > ./j/a.js",
     "css:watch": "watch 'npm run css' ./_src/scss/",
     "css": "parallelshell 'npm run css:core' 'npm run css:styles'",
-    "css:core": "node-sass ./_src/scss/core.scss | postcss --use autoprefixer -o ./c/a.css",
-    "css:styles": "node-sass ./_src/scss/styles.scss | postcss --use autoprefixer -o ./c/b.css",
+    "css:core": "node-sass ./_src/scss/core.scss | postcss --use autoprefixer | cssmin > ./c/a.css",
+    "css:styles": "node-sass ./_src/scss/styles.scss | postcss --use autoprefixer | cssmin > ./c/b.css",
     "html:watch": "watch 'npm run html' ./_src/html/",
     "html": "html-minifier --collapse-whitespace --input-dir ./_src/html/ --output-dir ./",
     "sync": "browser-sync start --server"

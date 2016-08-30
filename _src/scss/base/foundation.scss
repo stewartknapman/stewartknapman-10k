@@ -1,0 +1,39 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+* + * {
+  margin-top: 1.5rem;
+}
+
+* + br,
+option + option {
+  margin-top: 0;
+}
+
+
+/* take these out of core because we won't have any in baseline load */
+/*
+img {
+  max-width: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+*/
