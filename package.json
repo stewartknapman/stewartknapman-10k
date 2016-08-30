@@ -1,0 +1,19 @@
+{
+  "name": "stewartknapman_10k",
+  "version": "1.0.0",
+  "description": "Entry for the 10k apart competition",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stewartknapman/stewartknapman-10k.git"
+  },
+  "author": "@stewartknapman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stewartknapman/stewartknapman-10k/issues"
+  },
+  "homepage": "https://github.com/stewartknapman/stewartknapman-10k#readme"
+}
