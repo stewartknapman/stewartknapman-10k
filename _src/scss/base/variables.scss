@@ -1,0 +1,10 @@
+$brand-blue: #03b9e3;
+$brand-black: #011d23;
+$brand-white: #f6fdfe;
+$brand-grey-dark: #04313c;
+
+$text-color: $brand-black;
+$link-color: $brand-blue;
+$link-color-hover: darken($brand-blue, 15%);
+$selection-color: $brand-black;
+$selection-bg-color: lighten($brand-blue, 15%);

@@ -1,1 +1,5 @@
-@import './base/foundation.scss';
+@import './base/variables.scss';
+@import './mixins/lock.scss';
+@import './base/foundation-core.scss';
+@import './base/type-core.scss';
+@import './layouts/core.scss';

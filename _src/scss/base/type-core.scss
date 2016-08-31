@@ -1,0 +1,44 @@
+html {
+  font-family: Baskerville, Garamond, "Times New Roman", serif;
+  font-feature-settings:"onum" 1;
+  font-weight: 300;
+  @include lock(font-size, 20em, 87.5em, 1em, 1.5em);
+  @include lock(line-height, 20em, 87.5em, 1.3em, 1.5em);
+  color: $text-color;
+}
+
+h1 {
+  line-height: 1.1em;
+}
+
+h2 {
+  line-height: 1.2em;
+}
+
+h3 {
+  line-height: 1.3em;
+}
+
+h4 {
+  line-height: 1.4em;
+}
+
+h5 {
+  line-height: 1.5em;
+}
+
+h6 {
+  line-height: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  transition: .3s;
+  color: $link-color;
+  &:hover {
+    color: $link-color-hover;
+  }
+}
