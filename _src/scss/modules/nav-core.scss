@@ -5,13 +5,22 @@ nav {
   }
   a {
     display: block;
-    padding: 0.5em 0.75em; 
-    text-decoration: none;
+    padding: 0.5em 0.75em;
   }
 }
 
-@media (max-width: 37.5em) {
-  header nav li {
-    display: block;
+header nav {
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+  @media (max-width: 37.5em) {
+    li {
+      display: block;
+      border-bottom: $brand-grey-dark solid 1px;
+    }
+    a {
+      padding: 0.75em;
+    }
   }
 }
