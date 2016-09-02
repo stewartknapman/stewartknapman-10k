@@ -15,7 +15,7 @@ module.exports = {
     for (var k in obj) {
       if (obj.hasOwnProperty(k)) {
         ctx = ctx || obj[k];
-        callback.apply(ctx, [obj[k], k]);
+        callback.apply(ctx, [k, obj[k]]);
       }
     }
   },

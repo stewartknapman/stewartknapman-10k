@@ -1,5 +1,4 @@
 /* take these out of core because we won't have any in baseline load */
-/*
 img {
   max-width: 100%;
 }
@@ -7,10 +6,7 @@ img {
 svg {
   fill: currentColor;
 }
-*/
 
-/*
-body {
-  background: aqua;
+.h {
+  @include visually-hidden();
 }
-*/
