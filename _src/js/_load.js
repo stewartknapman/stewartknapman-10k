@@ -14,6 +14,7 @@ Load.prototype.css = function (files) {
 Load.prototype.js = function (files) {
   this._createAfter('script', files, function (el, file) {
     el.src = file;
+    el.async = true;
     return el;
   });
 };

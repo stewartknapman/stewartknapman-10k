@@ -1,0 +1,13 @@
+html {
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-feature-settings:"onum" 1,"liga";
+}
+
+a {
+  transition: .3s;
+  @include pretty-underlines();
+  
+  &:hover {
+    @include force-redraw;
+  }
+}

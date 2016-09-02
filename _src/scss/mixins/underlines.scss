@@ -1,0 +1,16 @@
+@mixin pretty-underlines () {
+  text-decoration: none;
+  background-image: linear-gradient( to right, currentColor 0%, currentColor 100% );
+  background-repeat: repeat-x;
+  background-position: 0 85%;
+  background-size: 100% 1px;
+}
+
+@mixin force-redraw {
+  /* 
+    Arbitrary webkit-only property that forces a redraw
+    Fixes currentColor bug
+    see: http://stackoverflow.com/questions/36046185/how-to-hack-around-linear-gradient-with-currentcolor-bug-in-chrome
+  */
+  -webkit-margin-start: -.001px;
+}
