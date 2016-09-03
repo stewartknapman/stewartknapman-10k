@@ -49,9 +49,11 @@ Load.prototype.img = function (files) {
 
 Load.prototype.imgReplace = function (id, markup) {
   var i = document.querySelector('#'+id);
-  var div = document.createElement('div');
-  div.innerHTML = markup;
-  i.parentNode.replaceChild(div.childNodes[0], i);
+  if (i) {
+    var div = document.createElement('div');
+    div.innerHTML = markup;
+    i.parentNode.replaceChild(div.childNodes[0], i);
+  }
 };
 
 /* PRIVATE */
