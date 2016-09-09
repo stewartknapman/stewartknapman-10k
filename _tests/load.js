@@ -50,7 +50,7 @@ describe('Load.js', function() {
     
     it('replaces an <i> tag with an <img> tag that matches its id', function () {
       var load = new Load();
-      load.img(imgFiles);
+      load.replace(imgFiles);
       assert.equal(document.body.innerHTML, imgFiles.a);
     });
   });

@@ -1,0 +1,16 @@
+.b {
+  display: block;
+  max-width: 8em;
+  margin-top: 0.75rem;
+  padding: 0.5em 1em;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: $link-color;
+  border-radius: 0.1em;
+  transition: background-color .3s;
+  &:hover {
+    color: #fff;
+    background-color: $link-color-hover;
+  }
+}

@@ -40,14 +40,14 @@ Load.prototype._ajaxSVG = function (file) {
   xhr.send();
 };
 
-/* IMG */
-Load.prototype.img = function (files) {
+/* IMG/Other Markup */
+Load.prototype.replace = function (files) {
   _.eachIn(files, function (id, markup) {
-    this.imgReplace(id, markup);
+    this.replaceMarkup(id, markup);
   }, this);
 };
 
-Load.prototype.imgReplace = function (id, markup) {
+Load.prototype.replaceMarkup = function (id, markup) {
   var i = document.querySelector('#'+id);
   if (i) {
     var div = document.createElement('div');

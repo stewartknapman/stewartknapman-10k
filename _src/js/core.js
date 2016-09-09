@@ -1,4 +1,5 @@
 // Check that we have what we need to move forward
+// classlist???
 var supports = !!document.querySelector && !!window.addEventListener;
 if (!supports) return;
 
@@ -6,14 +7,31 @@ var _ = require('./_lib.js');
 var Load = require('./_load.js');
 var load = new Load();
 
+
+// If css.supports load extra css
+// add classes for clip-path and shape
+var supportsCSS = function (property, className) {
+  if (CSS.supports(property)) {
+    document.documentElement.classList.add(className);
+  } else {
+    document.documentElement.classList.add('no-'+className);
+  }
+};
+
+if (CSS && CSS.supports) {
+  supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and ((clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)))', 'css-shape');
+}
+
+
 load.css(['/c/b.css']);
 load.svg(['/i/i.svg']);
+
 _.ready(function () {
-  load.img({
+  load.replace({
     ig: '<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>',
     it: '<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>',
     id: '<svg class="icon icon-dribbble"><use xlink:href="#icon-dribbble"></use></svg>',
-    p: '<img src="http://placehold.it/1440x600">'
+    p: '<img class="hero-img" src="/i/peckhams_2048.jpg">'
   });
 });
 

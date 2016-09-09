@@ -3,10 +3,6 @@ header {
   margin-top: 0;
 }
 
-body {
-  padding: 1.5rem 0;
-}
-
 header,
 footer {
   text-align: center;
@@ -14,6 +10,7 @@ footer {
 
 footer {
   font-size: 0.815em;
+  @include lock(padding-top padding-bottom, 20em, 87.5em, 1.3rem, 1.5rem);
 }
 
 .contain,
