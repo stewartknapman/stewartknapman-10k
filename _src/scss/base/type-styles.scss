@@ -3,6 +3,11 @@ html {
   font-feature-settings:"onum" 1,"liga";
 }
 
+h1 {
+  font-weight: 100;
+  color: $brand-blue;
+}
+
 a {
   transition: .3s;
   @include pretty-underlines();

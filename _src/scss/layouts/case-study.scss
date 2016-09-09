@@ -40,17 +40,22 @@
       shape-outside: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
     }
-    @media (min-width: 80em) {
-      shape-outside: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
-      clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
-    }
     @media (min-width: 90em) {
+      width: auto;
+      height: 120vh;
       shape-outside: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
       clip-path: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
     }
-    @media (min-width: 110em) and (min-height: 75em) {
-      width: auto;
-      height: 95vh;
+    @media (min-width: 90em) and (min-height: 65em) {
+      height: 90vh;
+    }
+    @media (min-width: 120em) {
+      shape-outside: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
+      clip-path: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
+    }
+    @media (min-width: 130em) {
+      shape-outside: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
+      clip-path: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
     }
   }
   

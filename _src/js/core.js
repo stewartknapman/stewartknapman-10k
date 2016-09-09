@@ -28,6 +28,7 @@ load.svg(['/i/i.svg']);
 
 _.ready(function () {
   load.replace({
+    l: '<svg class="logo"><use xlink:href="#logo"></use></svg>',
     ig: '<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>',
     it: '<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>',
     id: '<svg class="icon icon-dribbble"><use xlink:href="#icon-dribbble"></use></svg>',
@@ -50,7 +51,7 @@ _gaq.push(['_trackPageview']);
 // load typekit
 (function(d) {
   var config = {
-    kitId: 'jzs7qfl',
+    kitId: 'bmn1olh',
     scriptTimeout: 3000,
     async: true
   },
