@@ -32,7 +32,8 @@ _.ready(function () {
     ig: '<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>',
     it: '<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>',
     id: '<svg class="icon icon-dribbble"><use xlink:href="#icon-dribbble"></use></svg>',
-    p: '<img class="hero-img" src="/i/peckhams_2048.jpg">'
+    p: '<img class="hero-img" src="/i/peckhams_2048.jpg">',
+    phd: '<img class="hero-img" src="/i/phd_2048.jpg">'
   });
 });
 
