@@ -45,3 +45,13 @@ a {
 .ul {
   list-style: none;
 }
+
+dt {
+  font-weight: 600;
+  * + & {
+    margin-top: 0.5rem;
+  }
+}
+dd {
+  margin-top: 0;
+}
