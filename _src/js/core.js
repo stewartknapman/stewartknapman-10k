@@ -7,6 +7,13 @@ var _ = require('./_lib.js');
 var Load = require('./_load.js');
 var load = new Load();
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+    console.log('Yey!', reg);
+  }).catch(function(err) {
+    console.log('Boo!', err);
+  });
+}
 
 // If css.supports load extra css
 // add classes for clip-path and shape
@@ -21,7 +28,6 @@ var supportsCSS = function (property, className) {
 if (CSS && CSS.supports) {
   supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and ((clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)))', 'css-shape');
 }
-
 
 load.css(['/c/b.css']);
 load.svg(['/i/i.svg']);
