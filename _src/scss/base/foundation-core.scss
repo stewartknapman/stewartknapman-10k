@@ -17,11 +17,6 @@ html {
   @include lock(margin-top, 20em, 87.5em, 1.3rem, 1.5rem);
 }
 
-* + br,
-option + option {
-  margin-top: 0;
-}
-
 ::selection {
   color: $selection-color;
   background: $selection-bg-color;
