@@ -1,4 +1,3 @@
-var _ = require('./_lib.js');
 var Load = function () {};
 
 /* CSS */
@@ -69,5 +68,3 @@ Load.prototype._createAfter = function (tagName, files, callback) {
   
   _.insertAfter(docfrag, first);
 };
-
-module.exports = Load;

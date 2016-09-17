@@ -2,6 +2,21 @@
   margin-top: 0;
 }
 
+// Case studies
+#cs {
+  @supports (display: flex) {
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    li {
+      margin-top: 0;
+      border: red solid 1px;
+    }
+  }
+}
+
+
 // Poster image
 #pos {
   overflow: hidden;

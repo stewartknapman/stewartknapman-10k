@@ -5,11 +5,10 @@
   "main": "index.html",
   "scripts": {
     "build": "parallelshell 'npm run sync' 'npm run js:watch' 'npm run css:watch' 'npm run html:watch'",
-    "js:watch": "watch 'npm run test' ./_src/js/ ./_tests/",
-    "test": "mocha _tests/",
-    "posttest": "npm run js:core && npm run js:vendor && npm run js:sw",
-    "js:core": "browserify --debug ./_src/js/core.js > ./j/a.debug.js && browserify ./_src/js/core.js | uglifyjs -c -m > ./j/a.js",
-    "js:vendor": "browserify --debug ./_src/js/vendor.js > ./j/b.debug.js && browserify ./_src/js/vendor.js | uglifyjs -c -m > ./j/b.js",
+    "js:watch": "watch 'npm run js' ./_src/js/",
+    "js": "npm run js:core && npm run js:vendor && npm run js:sw",
+    "js:core": "uglifyjs ./_src/js/_lib.js ./_src/js/_load.js ./_src/js/core.js -c -m > ./j/a.js",
+    "js:vendor": "uglifyjs ./_src/js/vendor.js -c -m > ./j/b.js",
     "js:sw": "cp ./_src/js/sw.js ./sw.js",
     "css:watch": "watch 'npm run css' ./_src/scss/",
     "css": "parallelshell 'npm run css:core' 'npm run css:styles'",
@@ -32,16 +31,11 @@
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "browser-sync": "^2.14.0",
-    "browserify": "^13.1.0",
-    "chai": "^3.5.0",
     "cssmin": "^0.4.3",
     "html-minifier": "^3.0.2",
-    "jsdom": "^9.4.2",
-    "jsdom-global": "^2.1.0",
     "node-sass": "^3.8.0",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.6.0",
-    "sinon": "^1.17.5",
     "uglify-js": "^2.7.3",
     "watch": "^0.19.2"
   }
