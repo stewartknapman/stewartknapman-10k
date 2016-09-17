@@ -40,13 +40,13 @@
       shape-outside: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
     }
-    @media (min-width: 90em) {
+    @media (min-width: 95em) {
       width: auto;
       height: 120vh;
       shape-outside: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
       clip-path: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
     }
-    @media (min-width: 90em) and (min-height: 65em) {
+    @media (min-width: 95em) and (min-height: 65em) {
       height: 90vh;
     }
     @media (min-width: 120em) {
