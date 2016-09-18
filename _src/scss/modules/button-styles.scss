@@ -7,6 +7,6 @@
   color: $brand-blue;
   background-color: #fff;
   &:hover {
-    background-color: #ddd;
+    background-color: $brand-grey-light;
   }
 }

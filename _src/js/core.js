@@ -20,14 +20,14 @@ _.ready(function () {
     it: '<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>',
     id: '<svg class="icon icon-dribbble"><use xlink:href="#icon-dribbble"></use></svg>',
     posi: '<svg class="prod-img"><use xlink:href="#poster"></use></svg>',
-    hpk: '<img src="/i/peckhams_2048.jpg">',
-    hphd: '<img src="/i/phd_2048.jpg">',
-    hart: '<img src="/i/peckhams_2048.jpg">',
-    hjam: '<img src="/i/phd_2048.jpg">',
-    pk: '<a href="/peckhams.html"><img src="/i/peckhams_2048.jpg"></a>',
-    phd: '<a href="/phd.html"><img src="/i/phd_2048.jpg"></a>',
-    art: '<a href="/arthouse.html"><img src="/i/peckhams_2048.jpg"></a>',
-    jam: '<a href="/invites.html"><img src="/i/phd_2048.jpg"></a>',
+    hpk: '<img src="/i/peckhams_2048.jpg" alt="Peckhams limited release labels">',
+    hphd: '<img src="/i/phd_2048.jpg" alt="PHD six pack builder">',
+    hart: '<img src="/i/peckhams_2048.jpg" alt="Arthouse website">',
+    hjam: '<img src="/i/phd_2048.jpg" alt="Wedding invites">',
+    pk: '<a href="/peckhams.html"><img src="/i/peckhams_2048.jpg" alt="Peckhams limited release labels"></a>',
+    phd: '<a href="/phd.html"><img src="/i/phd_2048.jpg" alt="PHD six pack builder"></a>',
+    art: '<a href="/arthouse.html"><img src="/i/peckhams_2048.jpg" alt="Arthouse website"></a>',
+    jam: '<a href="/invites.html"><img src="/i/phd_2048.jpg" alt="Wedding invites"></a>',
     jtms: '<a class="b" id="jtms" href="https://luciddesign.myshopify.com/cart/25377140360:1" target="_blank">Buy the poster</a>'
   });
 });

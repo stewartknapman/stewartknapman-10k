@@ -11,17 +11,22 @@
   a {
     background-image: none;
   }
+  img {
+    filter: grayscale(100%);
+    transition: .5s;
+  }
   li {
     background-color: $brand-blue;
+    &:hover img {
+      filter:  grayscale(0);
+    }
+    &:hover a {
+      color: $brand-grey-light;
+    }
     a {
       color: #fff;
     }
   }
-/*
-  li > a:hover +h4 a {
-    color: $link-color-hover;
-  }
-*/
   
   @supports (display: flex) {
     ul {
