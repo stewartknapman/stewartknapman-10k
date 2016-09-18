@@ -1,3 +1,4 @@
+/*
 this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('app10k').then(function(cache) {
@@ -10,7 +11,9 @@ this.addEventListener('install', function(event) {
     })
   );
 });
+*/
 
+/*
 this.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
@@ -18,15 +21,12 @@ this.addEventListener('fetch', function(event) {
     })
   );
 
-
-/*
-  if (/\.jpg$|.gif$|.png$/.test(event.request.url)) {
-    return caches.open('app10k').then(function(cache) {
-      cache.put(event.request.url);
-      return response;
-    });
-  } else {
-    
-  }
-*/
+//   if (/\.jpg$|.gif$|.png$/.test(event.request.url)) {
+//     return caches.open('app10k').then(function(cache) {
+//       cache.put(event.request.url);
+//       return response;
+//     });
+//   } else {    
+//   }
 });
+*/

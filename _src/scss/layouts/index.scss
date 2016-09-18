@@ -2,17 +2,50 @@
   margin-top: 0;
 }
 
-// Case studies
-#cs {
+// Case study thumbs
+#cs {  
+  h4 {
+    margin-top: 0;
+    padding: 0 1em 0.5rem;
+  }
+  a {
+    background-image: none;
+  }
+  li {
+    background-color: $brand-blue;
+    a {
+      color: #fff;
+    }
+  }
+/*
+  li > a:hover +h4 a {
+    color: $link-color-hover;
+  }
+*/
+  
   @supports (display: flex) {
     ul {
       display: flex;
       flex-flow: row wrap;
+      justify-content: space-between;
+      margin-top: 0;
     }
     li {
-      margin-top: 0;
-      border: red solid 1px;
+      margin-top: 1.5rem;
+      @media (min-width: 35em) {
+        max-width: 48%;
+      }
     }
+  }
+}
+.css-shape #cs {
+  img {
+    float: right;
+    shape-margin: 0.5rem;
+    shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  }
+  h4 {
   }
 }
 
@@ -26,7 +59,7 @@
   color: #fff;
 }
 
-.product-thumb {
+.prod-img {
   height: 20em;
   width: 100%;
   color: $brand-black;

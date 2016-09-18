@@ -23,5 +23,7 @@ a {
 
 .m {
   font-size: 1.75em;
-  font-weight: 100;
+  .wf-active & {
+    font-weight: 100;
+  }
 }

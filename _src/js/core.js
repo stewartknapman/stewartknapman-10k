@@ -9,17 +9,6 @@ if ('serviceWorker' in navigator) {
 }
 */
 
-/*
-// Service worker debug - REMOVE WHEN WORKING
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(function(reg) {
-    console.log('Yey!', reg);
-  }).catch(function(err) {
-    console.log('Boo!', err);
-  });
-}
-*/
-
 // Require the loader modual
 window.loader = load = new Load();
 
@@ -30,15 +19,15 @@ _.ready(function () {
     ig: '<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>',
     it: '<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>',
     id: '<svg class="icon icon-dribbble"><use xlink:href="#icon-dribbble"></use></svg>',
-    posi: '<svg class="product-thumb"><use xlink:href="#poster"></use></svg>',
-    pk: '<img class="hero-img" src="/i/peckhams_2048.jpg">',
-    hphd: '<img class="hero-img" src="/i/phd_2048.jpg">',
-    hart: '<img class="hero-img" src="/i/peckhams_2048.jpg">',
-    hjam: '<img class="hero-img" src="/i/phd_2048.jpg">',
-    pk: '<img class="hero-img" src="/i/peckhams_2048.jpg">',
-    phd: '<img class="hero-img" src="/i/phd_2048.jpg">',
-    art: '<img class="hero-img" src="/i/peckhams_2048.jpg">',
-    jam: '<img class="hero-img" src="/i/phd_2048.jpg">',
+    posi: '<svg class="prod-img"><use xlink:href="#poster"></use></svg>',
+    hpk: '<img src="/i/peckhams_2048.jpg">',
+    hphd: '<img src="/i/phd_2048.jpg">',
+    hart: '<img src="/i/peckhams_2048.jpg">',
+    hjam: '<img src="/i/phd_2048.jpg">',
+    pk: '<a href="/peckhams.html"><img src="/i/peckhams_2048.jpg"></a>',
+    phd: '<a href="/phd.html"><img src="/i/phd_2048.jpg"></a>',
+    art: '<a href="/arthouse.html"><img src="/i/peckhams_2048.jpg"></a>',
+    jam: '<a href="/invites.html"><img src="/i/phd_2048.jpg"></a>',
     jtms: '<a class="b" id="jtms" href="https://luciddesign.myshopify.com/cart/25377140360:1" target="_blank">Buy the poster</a>'
   });
 });
