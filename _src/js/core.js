@@ -25,8 +25,7 @@ _.ready(function () {
     pk: '<a href="/peckhams.html"><img src="/i/peckhams_2048.jpg" alt="Peckhams limited release labels"></a>',
     phd: '<a href="/phd.html"><img src="/i/phd_2048.jpg" alt="PHD six pack builder"></a>',
     art: '<a href="/arthouse.html"><img src="/i/peckhams_2048.jpg" alt="Arthouse website"></a>',
-    jam: '<a href="/invites.html"><img src="/i/phd_2048.jpg" alt="Wedding invites"></a>',
-    jtms: '<a class="b" id="jtms" href="https://luciddesign.myshopify.com/cart/25377140360:1" target="_blank">Buy the poster</a>'
+    jam: '<a href="/invites.html"><img src="/i/phd_2048.jpg" alt="Wedding invites"></a>'
   });
 });
 
