@@ -2,12 +2,10 @@
 // Cutting the mustard
 if (!d.querySelector) return;
 
-/*
 // Register our service worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js');
 }
-*/
 
 // Require the loader modual
 window.loader = load = new Load();
