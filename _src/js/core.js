@@ -20,11 +20,11 @@ _.ready(function () {
     posi: '<svg class="prod-img"><use xlink:href="#poster"></use></svg>',
     hpk: '<img src="/i/peckhams_2048.jpg" alt="Peckhams limited release labels">',
     hphd: '<img src="/i/phd_2048.jpg" alt="PHD six pack builder">',
-    hart: '<img src="/i/peckhams_2048.jpg" alt="Arthouse website">',
+    hart: '<img src="/i/arthouse_2048_2.jpg" alt="Arthouse website">',
     hjam: '<img src="/i/phd_2048.jpg" alt="Wedding invites">',
     pk: '<a href="/peckhams.html"><img src="/i/peckhams_2048.jpg" alt="Peckhams limited release labels"></a>',
     phd: '<a href="/phd.html"><img src="/i/phd_2048.jpg" alt="PHD six pack builder"></a>',
-    art: '<a href="/arthouse.html"><img src="/i/peckhams_2048.jpg" alt="Arthouse website"></a>',
+    art: '<a href="/arthouse.html"><img src="/i/arthouse_2048_2.jpg" alt="Arthouse website"></a>',
     jam: '<a href="/invites.html"><img src="/i/phd_2048.jpg" alt="Wedding invites"></a>'
   });
 });
