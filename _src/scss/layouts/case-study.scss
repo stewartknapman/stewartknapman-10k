@@ -1,69 +1,57 @@
 .cs {
   main,
-  .contain {
+  .w {
     margin-top: 0;
   }
-  
-  .css-shape & .contain,
-  .no-css-shape & .contain {
-    @include lock(margin-left, 45em, 80em, 8%, 4%);
-    margin-left: auto;
-    @include lock(padding-top, 20em, 87.5em, 1.3rem, 1.5rem);
+  footer {
+    clear: both;
   }
-  .no-css-shape & .contain {
-    position: relative;
-    background-color: rgba(255,255,255,.8);
-    padding: 1rem 1em;
-    @include lock(margin-top, 37.5em, 100em, -6rem, -40rem);
-    margin-top: -4em;
-  }
-  
   img {
     width: 100%;
     max-width: none;
     margin-bottom: 1.5rem;
   }
-  .css-shape & img {
-    float: right;
-    margin-bottom: 0;
-    
-    shape-margin: 1rem;
-    shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-      
-    @media (min-width: 50em) {
-      shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 40%);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
-    }
-    @media (min-width: 65em) {
-      shape-margin: 1.5rem;
-      shape-outside: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
-    }
-    @media (min-width: 110em) {
-      width: auto;
-      height: 120vh;
-      shape-outside: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
-    }
-    @media (min-width: 110em) and (min-height: 75em) {
-      height: 90vh;
-    }
-    @media (min-width: 120em) {
-      shape-outside: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
-      clip-path: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
-    }
-    @media (min-width: 130em) {
-      shape-outside: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
-      clip-path: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
-    }
-  }
   
-  footer {
-    clear: both;
-  }
-  .no-css-shape & footer {
-    position: relative;
-    background-color: #fff;
+  .css-shape & {
+    .w {
+      @include lock(padding-top, 20em, 87.5em, 1.3rem, 1.5rem);
+      @include lock(margin-left, 45em, 80em, 8%, 4%);
+      margin-left: auto;
+    }
+
+    img {
+      float: right;
+      margin-bottom: 0;
+      shape-margin: 1rem;
+      shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        
+      @media (min-width: 50em) {
+        shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+      }
+      @media (min-width: 65em) {
+        shape-margin: 1.5rem;
+        shape-outside: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+      }
+      @media (min-width: 110em) {
+        width: auto;
+        height: 120vh;
+        shape-outside: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
+      }
+      @media (min-width: 110em) and (min-height: 75em) {
+        height: 90vh;
+      }
+      @media (min-width: 120em) {
+        shape-outside: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
+        clip-path: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
+      }
+      @media (min-width: 130em) {
+        shape-outside: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
+      }
+    }
   }
 }
