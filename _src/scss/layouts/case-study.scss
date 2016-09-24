@@ -26,16 +26,16 @@
       shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
         
-      @media (min-width: 50em) {
+      @media (min-width: 50em) { // 800px
         shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 40%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
       }
-      @media (min-width: 65em) {
+      @media (min-width: 65em) { // 1040px
         shape-margin: 1.5rem;
         shape-outside: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
       }
-      @media (min-width: 110em) {
+      @media (min-width: 110em) { // 1760px
         width: auto;
         height: 120vh;
         shape-outside: polygon(50% 0, 100% 0, 100% 100%, 60% 100%);
@@ -44,11 +44,11 @@
       @media (min-width: 110em) and (min-height: 75em) {
         height: 90vh;
       }
-      @media (min-width: 120em) {
+      @media (min-width: 120em) { // 1920px
         shape-outside: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
         clip-path: polygon(40% 0, 100% 0, 100% 100%, 50% 100%);
       }
-      @media (min-width: 130em) {
+      @media (min-width: 130em) { // 2080px
         shape-outside: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
         clip-path: polygon(30% 0, 100% 0, 100% 100%, 40% 100%);
       }
