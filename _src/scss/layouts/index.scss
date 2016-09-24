@@ -35,18 +35,20 @@
   h4 {
     margin-top: 0;
     a {
-      display: block;
       padding: 0 1em 0.5rem;
     }
   }
   a {
+    display: block;
     background-image: none;
   }
   img {
+    display: block;
     filter: grayscale(100%);
     transition: .5s;
   }
   li {
+    width: 100%;
     background-color: $brand-blue;
     &:hover img {
       filter: grayscale(0);
@@ -59,14 +61,15 @@
   @supports (display: flex) {
     ul {
       display: flex;
-      flex-flow: row wrap;
+      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
       margin-top: 0;
     }
     li {
       margin-top: 1.5rem;
       @media (min-width: 35em) {
-        max-width: 48%;
+        width: 48%;
       }
     }
   }
