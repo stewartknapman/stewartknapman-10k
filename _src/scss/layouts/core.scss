@@ -13,8 +13,7 @@ footer {
   @include lock(padding-top padding-bottom, 20em, 87.5em, 1.3rem, 1.5rem);
 }
 
-.w,
-.hr {
+.w {
   width: 96%;
   max-width: 32em;
   margin-left: auto;
