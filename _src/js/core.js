@@ -84,17 +84,9 @@ supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webki
           /i/pk900.jpg 900w,
           /i/pk1080.jpg 1080w"
        sizes="(min-width: 87.5em) 23em,
-          (min-width: 75em) 28.75vw,
-          (min-width: 62.5em) 32.2vw,
           (min-width: 56.25em) 34.5vw,
-          (min-width: 50em) 37.5vw,
-          (min-width: 43.75em) 41vw,
           (min-width: 35em) 46vw,
           96vw"
        alt="Peckhams limited release labels">
        
-       
-  
-  
-  
 */
