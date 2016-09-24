@@ -1,4 +1,6 @@
-var _ = {
+var d = document,
+  w = window,
+  _ = {
   /*
     Array Functions
   */
@@ -34,10 +36,10 @@ var _ = {
   ready: function (callback, ctx) {
     if (typeof callback !== 'function') return;
     
-    if (document.readyState !== 'loading') {
+    if (d.readyState !== 'loading') {
       callback.apply(ctx);
     } else {
-      document.addEventListener('DOMContentLoaded', function () {
+      d.addEventListener('DOMContentLoaded', function () {
         callback.apply(ctx);
       });
     }

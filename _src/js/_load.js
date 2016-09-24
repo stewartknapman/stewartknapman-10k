@@ -29,10 +29,7 @@ Load.prototype._ajaxSVG = function (file) {
   var xhr = new XMLHttpRequest();
   
   xhr.addEventListener('load', function (e) {
-    document.body.insertBefore(this.responseXML.documentElement, document.body.childNodes[0]);
-  });
-  xhr.addEventListener('error', function (e) {
-    console.log('AJAX ERROR:', this, e);
+    d.body.insertBefore(this.responseXML.documentElement, d.body.childNodes[0]);
   });
   
   xhr.open("GET", file, true);
@@ -42,19 +39,14 @@ Load.prototype._ajaxSVG = function (file) {
 /* Image */
 Load.prototype.img = function (id, alt, sizes) {
   var widths = [320,440,560,680,900,1080,1200,1500,1800,2100]; // remove some below 1080?
-  var img = new Image();
-  img.src = '/i/'+id+widths[0]+'.jpg';
-  img.srcset = this.imgSrcset(id, widths);
-  img.sizes = sizes || '100vw';
-  img.alt = alt;
-  return img.outerHTML;
+  return '<img src="'+id+widths[0]+'" srcset="'+this.imgSrcset(id, widths)+'" sizes="'+(sizes || '100vw')+'" alt="'+alt+'">';
 };
 Load.prototype.imgSrcset = function (id,widths) {
   var str = [];
   _.each(widths, function (width) {
     str.push('/i/'+id+width+'.jpg '+width+'w');
   });
-  return str;
+  return str.join(',');
 };
 
 /* Markup */
@@ -65,21 +57,21 @@ Load.prototype.replace = function (files) {
 };
 
 Load.prototype.replaceMarkup = function (id, markup) {
-  var i = document.querySelector('#'+id);
-  if (i) {
-    var div = document.createElement('div');
+  var ele = document.querySelector('#'+id);
+  if (ele) {
+    var div = d.createElement('div');
     div.innerHTML = markup;
-    i.parentNode.replaceChild(div.childNodes[0], i);
+    ele.parentNode.replaceChild(div.childNodes[0], ele);
   }
 };
 
 /* PRIVATE */
 Load.prototype._createAfter = function (tagName, files, callback) {
-  var first = document.querySelector(tagName);
-  var docfrag = document.createDocumentFragment();
+  var first = d.querySelector(tagName);
+  var docfrag = d.createDocumentFragment();
   
   _.each(files, function (file) {
-    var el = document.createElement(tagName);
+    var el = d.createElement(tagName);
     el = callback(el, file);
     docfrag.appendChild(el);
   });

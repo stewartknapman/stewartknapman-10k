@@ -1,6 +1,6 @@
-(function(d, _, Load) {
+(function(d, w, _, Load) {
 // Cutting the mustard
-if (!d.querySelector) return;
+if (!d.querySelector && !w.addEventListener) return;
 
 // Register our service worker
 /*
@@ -10,7 +10,7 @@ if ('serviceWorker' in navigator) {
 */
 
 // Require the loader modual
-window.loader = load = new Load();
+w.loader = load = new Load();
 
 var csImgs = {
   pk: 'Peckhams limited release labels',
@@ -31,7 +31,7 @@ _.eachIn(csImgs, function (id, alt) {
 });
 // case study thumbs
 _.eachIn(csImgs, function (id, alt) {
-  imgs['c'+id] = load.img(id, alt, 'sizes="(min-width: 87.5em) 23em,(min-width: 56.25em) 34.5vw,(min-width: 35em) 46vw,96vw"');
+  imgs['c'+id] = load.img(id, alt, '(min-width: 87.5em) 23em,(min-width: 56.25em) 34.5vw,(min-width: 35em) 46vw,96vw');
 });
 
 // On DOMContentLoaded start adding images, svg, and other assets
@@ -44,7 +44,8 @@ load.css(['/c/b.css']);
 
 // Load SVG files
 var svgFiles = ['/i/i.svg'];
-if (d.querySelector('body').className === 'ix') { // only include the poster svg on the index
+if (d.querySelector('body').className === 'ix') {
+  // only include the poster svg on the index
   svgFiles.push('/i/poster.svg');
 }
 load.svg(svgFiles);
@@ -56,21 +57,13 @@ if (location.search !== '?vendor=false') {
 
 // If we have CSS.supports and classList then add classes for clip-path and shape
 if (!CSS && !CSS.supports && !("classList" in d.createElement("p"))) return;
+if (CSS.supports('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and ((clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)))')) {
+  d.documentElement.classList.add('css-shape');
+}
 
-var supportsCSS = function (property, className) {
-  if (CSS.supports(property)) {
-    d.documentElement.classList.add(className);
-  }
-};
-
-supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and ((clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)))', 'css-shape');
-
-})(document, _, Load);
+})(d, w, _, Load);
 
 /*
-  TODO: remove some imgs sizes to bring js files size down
-  - js build img tags for replace? if it's lighter
-  
   // Case study hero
   <img src="/i/pk320.jpg"
        srcset="/i/pk320.jpg 320w,
@@ -99,7 +92,4 @@ supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webki
           (min-width: 35em) 46vw,
           96vw"
        alt="Peckhams limited release labels">
-       
-       
-       
 */
