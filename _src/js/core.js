@@ -60,6 +60,8 @@ supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webki
 })(document, _, Load);
 
 /*
+  TODO: remove some imgs sizes to bring js files size down
+  
   // Case study hero
   <img src="/i/pk320.jpg"
        srcset="/i/pk320.jpg 320w,
