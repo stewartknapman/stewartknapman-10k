@@ -23,7 +23,8 @@ var imgs = {
   g: '<svg class="i ig"><use xlink:href="#icon-github"></use></svg>',
   t: '<svg class="i it"><use xlink:href="#icon-twitter"></use></svg>',
   d: '<svg class="i id"><use xlink:href="#icon-dribbble"></use></svg>',
-  p: '<svg class="pdi"><use xlink:href="#poster"></use></svg>'
+  p: '<svg class="pdi"><use xlink:href="#poster"></use></svg>' //,
+//   hrj: load.img('j', 'Stewart Knapman: Jack of Trades; Master of Some.')
 };
 // case study hero images
 _.eachIn(csImgs, function (id, alt) {

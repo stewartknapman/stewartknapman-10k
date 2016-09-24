@@ -4,8 +4,30 @@
   }
 }
 
+.ix main,
 .ix footer {
   margin-top: 0;
+}
+
+// Hero
+#hr {
+  position: relative;
+  img {
+    filter: grayscale(100%);
+      display: block;
+  }
+  @media (min-width: 45em) {
+    border-bottom: $brand-blue solid 2px;
+    .w {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 0;
+      padding: 1.5rem 1.5em;
+      background-color: rgba(255,255,255,.95);
+    }
+  }
 }
 
 // Case study thumbs
@@ -27,7 +49,7 @@
   li {
     background-color: $brand-blue;
     &:hover img {
-      filter:  grayscale(0);
+      filter: grayscale(0);
     }
     a {
       color: #fff;
@@ -59,7 +81,6 @@
   h4 {
   }
 }
-
 
 // Poster image
 #pd {
