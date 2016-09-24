@@ -20,14 +20,14 @@ _.ready(function () {
     t: '<svg class="i it"><use xlink:href="#icon-twitter"></use></svg>',
     d: '<svg class="i id"><use xlink:href="#icon-dribbble"></use></svg>',
     p: '<svg class="pdi"><use xlink:href="#poster"></use></svg>',
-    hrpk: '<img src="/i/peckhams_2048.jpg" alt="Peckhams limited release labels">',
-    hrp: '<img src="/i/phd_2048.jpg" alt="PHD six pack builder">',
-    hra: '<img src="/i/arthouse_2048_2.jpg" alt="Arthouse website">',
-    hri: '<img src="/i/phd_2048.jpg" alt="Wedding invites">',
-    c1: '<a href="/peckhams.html"><img src="/i/peckhams_2048.jpg" alt="Peckhams limited release labels"></a>',
-    c2: '<a href="/phd.html"><img src="/i/phd_2048.jpg" alt="PHD six pack builder"></a>',
-    c3: '<a href="/arthouse.html"><img src="/i/arthouse_2048_2.jpg" alt="Arthouse website"></a>',
-    c4: '<a href="/invites.html"><img src="/i/phd_2048.jpg" alt="Wedding invites"></a>'
+    hrpk: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="Peckhams limited release labels">',
+    hrp: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="PHD six pack builder">',
+    hra: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="Arthouse website">',
+    hri: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="Wedding invites">',
+    c1: '<a href="/peckhams.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="Peckhams limited release labels"></a>',
+    c2: '<a href="/phd.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="PHD six pack builder"></a>',
+    c3: '<a href="/arthouse.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="Arthouse website"></a>',
+    c4: '<a href="/invites.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="Wedding invites"></a>'
   });
 });
 
@@ -61,27 +61,28 @@ supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webki
 
 /*
   // Case study hero
-  <img src="/i/peckhams_230.jpg"
-       srcset="/i/peckhams_320.jpg 320w,
-          /i/peckhams_440.jpg 440w,
-          /i/peckhams_560.jpg 560w,
-          /i/peckhams_680.jpg 680w,
-          /i/peckhams_900.jpg 900w,
-          /i/peckhams_1200.jpg 1200w,
-          /i/peckhams_1500.jpg 1500w,
-          /i/peckhams_1800.jpg 1800w,
-          /i/peckhams_2100.jpg 2100w"
+  <img src="/i/pk320.jpg"
+       srcset="/i/pk320.jpg 320w,
+          /i/pk440.jpg 440w,
+          /i/pk560.jpg 560w,
+          /i/pk680.jpg 680w,
+          /i/pk900.jpg 900w,
+          /i/pk1080.jpg 1080w,
+          /i/pk1200.jpg 1200w,
+          /i/pk1500.jpg 1500w,
+          /i/pk1800.jpg 1800w,
+          /i/pk2100.jpg 2100w"
        sizes="100vw"
        alt="Peckhams limited release labels">
   
   // Case study thumb
-  <img src="/i/peckhams_320.jpg"
-       srcset="/i/peckhams_320.jpg 320w,
-          /i/peckhams_440.jpg 440w,
-          /i/peckhams_560.jpg 560w,
-          /i/peckhams_680.jpg 680w,
-          /i/peckhams_900.jpg 900w,
-          /i/peckhams_1080.jpg 1080w"
+  <img src="/i/pk320.jpg"
+       srcset="/i/pk320.jpg 320w,
+          /i/pk440.jpg 440w,
+          /i/pk560.jpg 560w,
+          /i/pk680.jpg 680w,
+          /i/pk900.jpg 900w,
+          /i/pk1080.jpg 1080w"
        sizes="(min-width: 87.5em) 23em,
           (min-width: 75em) 28.75vw,
           (min-width: 62.5em) 32.2vw,
@@ -91,5 +92,9 @@ supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webki
           (min-width: 35em) 46vw,
           96vw"
        alt="Peckhams limited release labels">
+       
+       
+  
+  
   
 */
