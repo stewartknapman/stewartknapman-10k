@@ -12,23 +12,31 @@ if ('serviceWorker' in navigator) {
 // Require the loader modual
 window.loader = load = new Load();
 
+var csImgs = {
+  pk: 'Peckhams limited release labels',
+  p: 'PHD six pack builder',
+  a: 'Arthouse website',
+  i: 'Wedding invites'
+};
+var imgs = {
+  l: '<a href="/"><svg class="l"><use xlink:href="#logo"></use></svg></a>',
+  g: '<svg class="i ig"><use xlink:href="#icon-github"></use></svg>',
+  t: '<svg class="i it"><use xlink:href="#icon-twitter"></use></svg>',
+  d: '<svg class="i id"><use xlink:href="#icon-dribbble"></use></svg>',
+  p: '<svg class="pdi"><use xlink:href="#poster"></use></svg>'
+};
+// case study hero images
+_.eachIn(csImgs, function (id, alt) {
+  imgs['hr'+id] = load.img(id, alt);
+});
+// case study thumbs
+_.eachIn(csImgs, function (id, alt) {
+  imgs['c'+id] = load.img(id, alt, 'sizes="(min-width: 87.5em) 23em,(min-width: 56.25em) 34.5vw,(min-width: 35em) 46vw,96vw"');
+});
+
 // On DOMContentLoaded start adding images, svg, and other assets
 _.ready(function () {
-  load.replace({
-    l: '<a href="/"><svg class="l"><use xlink:href="#logo"></use></svg></a>',
-    g: '<svg class="i ig"><use xlink:href="#icon-github"></use></svg>',
-    t: '<svg class="i it"><use xlink:href="#icon-twitter"></use></svg>',
-    d: '<svg class="i id"><use xlink:href="#icon-dribbble"></use></svg>',
-    p: '<svg class="pdi"><use xlink:href="#poster"></use></svg>',
-    hrpk: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="Peckhams limited release labels">',
-    hrp: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="PHD six pack builder">',
-    hra: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="Arthouse website">',
-    hri: '<img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w,/i/pk1200.jpg 1200w,/i/pk1500.jpg 1500w,/i/pk1800.jpg 1800w,/i/pk2100.jpg 2100w" sizes="100vw" alt="Wedding invites">',
-    c1: '<a href="/peckhams.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="Peckhams limited release labels"></a>',
-    c2: '<a href="/phd.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="PHD six pack builder"></a>',
-    c3: '<a href="/arthouse.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="Arthouse website"></a>',
-    c4: '<a href="/invites.html"><img src="/i/pk320.jpg" srcset="/i/pk320.jpg 320w,/i/pk440.jpg 440w,/i/pk560.jpg 560w,/i/pk680.jpg 680w,/i/pk900.jpg 900w,/i/pk1080.jpg 1080w" sizes="(min-width: 87.5em) 23em,(min-width: 75em) 28.75vw,(min-width: 62.5em) 32.2vw,(min-width: 56.25em) 34.5vw,(min-width: 50em) 37.5vw,(min-width: 43.75em) 41vw,(min-width: 35em) 46vw, 96vw" alt="Wedding invites"></a>'
-  });
+  load.replace(imgs);
 });
 
 // load the extra css
@@ -61,6 +69,7 @@ supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webki
 
 /*
   TODO: remove some imgs sizes to bring js files size down
+  - js build img tags for replace? if it's lighter
   
   // Case study hero
   <img src="/i/pk320.jpg"
@@ -90,5 +99,7 @@ supportsCSS('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webki
           (min-width: 35em) 46vw,
           96vw"
        alt="Peckhams limited release labels">
+       
+       
        
 */

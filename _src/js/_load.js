@@ -39,7 +39,25 @@ Load.prototype._ajaxSVG = function (file) {
   xhr.send();
 };
 
-/* IMG/Other Markup */
+/* Image */
+Load.prototype.img = function (id, alt, sizes) {
+  var widths = [320,440,560,680,900,1080,1200,1500,1800,2100]; // remove some below 1080?
+  var img = new Image();
+  img.src = '/i/'+id+widths[0]+'.jpg';
+  img.srcset = this.imgSrcset(id, widths);
+  img.sizes = sizes || '100vw';
+  img.alt = alt;
+  return img.outerHTML;
+};
+Load.prototype.imgSrcset = function (id,widths) {
+  var str = [];
+  _.each(widths, function (width) {
+    str.push('/i/'+id+width+'.jpg '+width+'w');
+  });
+  return str;
+};
+
+/* Markup */
 Load.prototype.replace = function (files) {
   _.eachIn(files, function (id, markup) {
     this.replaceMarkup(id, markup);
