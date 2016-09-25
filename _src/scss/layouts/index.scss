@@ -9,6 +9,14 @@
   margin-top: 0;
 }
 
+#hr,
+#cs {
+  img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 // Hero
 .imgs #hr {
   position: relative;
