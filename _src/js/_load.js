@@ -37,8 +37,8 @@ Load.prototype._ajaxSVG = function (file) {
 };
 
 /* Image */
-Load.prototype.img = function (id, alt, sizes) {
-  var widths = [320,440,560,680,900,1080,1200,1500,1800,2100]; // remove some below 1080?
+Load.prototype.img = function (id, alt, sizes, thumb) {
+  var widths = (thumb)? [320,440,560,680,900] : [320,440,560,680,900,1080,1200,1500,1800,2100];
   return '<img src="'+id+widths[0]+'" srcset="'+this.imgSrcset(id, widths)+'" sizes="'+(sizes || '100vw')+'" alt="'+alt+'">';
 };
 Load.prototype.imgSrcset = function (id,widths) {

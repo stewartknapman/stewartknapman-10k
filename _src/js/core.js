@@ -32,7 +32,7 @@ _.eachIn(csImgs, function (id, alt) {
 });
 // case study thumbs
 _.eachIn(csImgs, function (id, alt) {
-  imgs['c'+id] = load.img(id, alt, '(min-width: 87.5em) 23em,(min-width: 56.25em) 34.5vw,(min-width: 35em) 46vw,96vw');
+  imgs['c'+id] = load.img(id, alt, '(min-width: 87.5em) 23em,(min-width: 56.25em) 34.5vw,(min-width: 35em) 46vw,96vw', true);
 });
 
 // On DOMContentLoaded start adding images, svg, and other assets
