@@ -8,6 +8,8 @@ this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('app10k-v1').then(function(cache) {
       return cache.addAll([
+        '/',
+        '/index.html',
         '/c/a.css',
         '/c/b.css',
         '/j/a.js',
