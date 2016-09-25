@@ -3,11 +3,9 @@
 if (!d.querySelector && !w.addEventListener && !("classList" in d.createElement("p"))) return;
 
 // Register our service worker
-/*
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js');
 }
-*/
 
 // Require the loader modual
 w.loader = load = new Load();
