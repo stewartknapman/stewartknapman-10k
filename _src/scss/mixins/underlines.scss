@@ -1,6 +1,6 @@
 @mixin pretty-underlines () {
   text-decoration: none;
-//   background-image: linear-gradient( to right, currentColor 0%, currentColor 100% );
+  background-image: linear-gradient( to right, currentColor 0%, currentColor 100% ); // Google page speed chokes on this line
   background-repeat: repeat-x;
   background-position: 0 85%;
   background-size: 100% 1px;
