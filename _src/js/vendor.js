@@ -20,6 +20,8 @@ _gaq.push(['_trackPageview']);
 
 // Load Shopify buy button, but only on index.html
 // And don't cache it so that if we are offline it won't break the button.
+// There has to be a better way to deal with this, probably within the service worker.
+// We want browser caching when online, but no caching when offline.
 var getRandomInt = function (min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
