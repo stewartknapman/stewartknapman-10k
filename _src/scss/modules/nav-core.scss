@@ -21,7 +21,9 @@ header nav {
   }
 }
 footer nav + a {
-  display: block;
-  padding: 0.75em;
+  display: inline-block;
   margin-top: 0.5rem;
+  @media (min-width: 35em) {
+    margin-top: 0;
+  }
 }
