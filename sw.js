@@ -1,7 +1,7 @@
 // Example code mostly from: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 
 var canCache = function (request) {
-  return (!request.url.includes('shopify') && !request.url.includes('google') && !request.url.includes('browser-sync'));
+  return (!request.url.includes('shopify') && !request.url.includes('google') && !request.url.includes('browser-sync') && !request.url.includes('chrome-extension'));
 };
 
 this.addEventListener('install', function(event) {
