@@ -20,10 +20,6 @@
 // Hero
 .imgs #hr {
   position: relative;
-  img {
-    filter: grayscale(100%);
-      display: block;
-  }
   @media (min-width: 45em) {
     border-bottom: $brand-blue solid 2px;
     .w {
@@ -35,6 +31,14 @@
       padding: 1.5rem 1.5em;
       background-color: rgba(255,255,255,.96);
     }
+  }
+  @media (min-width: 110em) and (min-height: 45em) {
+    overflow: hidden;
+    max-height: 80vh;
+  }
+  img {
+    filter: grayscale(100%);
+      display: block;
   }
 }
 
