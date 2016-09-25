@@ -47,7 +47,7 @@
   h4 {
     margin-top: 0;
     a {
-      padding: 0 1em 0.5rem;
+      padding: 0.5rem 1em;
     }
   }
   a {
@@ -92,8 +92,6 @@
     shape-margin: 0.5rem;
     shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  }
-  h4 {
   }
 }
 
