@@ -1,6 +1,6 @@
 (function(d, w, _, Load) {
 // Cutting the mustard
-if (!d.querySelector && !w.addEventListener) return;
+if (!d.querySelector && !w.addEventListener && !("classList" in d.createElement("p"))) return;
 
 // Register our service worker
 /*
@@ -42,6 +42,7 @@ _.ready(function () {
 
 // load the extra css
 load.css(['/c/b.css']);
+d.documentElement.classList.add('imgs');
 
 // Load SVG files
 var svgFiles = ['/i/i.svg'];
@@ -57,7 +58,7 @@ if (location.search !== '?vendor=false') {
 }
 
 // If we have CSS.supports and classList then add classes for clip-path and shape
-if (!CSS && !CSS.supports && !("classList" in d.createElement("p"))) return;
+if (!CSS && !CSS.supports) return;
 if (CSS.supports('(shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and (-webkit-shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 80%)) and ((clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)))')) {
   d.documentElement.classList.add('css-shape');
 }
