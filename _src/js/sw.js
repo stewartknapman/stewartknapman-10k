@@ -7,7 +7,7 @@ var canCache = function (request) {
 
 this.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('app10k-v1').then(function(cache) {
+    caches.open('app10k-v2').then(function(cache) {
       return cache.addAll([
         '/',
         '/index.html',
@@ -30,7 +30,7 @@ this.addEventListener('fetch', function(event) {
     caches.match(event.request).then(function(resp) {
       return resp || fetch(event.request).then(function(response) {
         if (canCache(event.request) && response.ok) {
-          caches.open('app10k-v1').then(function(cache) {
+          caches.open('app10k-v2').then(function(cache) {
             cache.put(event.request, response.clone());
           });
         }
